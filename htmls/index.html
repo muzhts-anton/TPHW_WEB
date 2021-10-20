@@ -1,88 +1,216 @@
 <!doctype html>
 <html lang="en" class="h-100">
-  <head>
+
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.88.1">
-    <title>Sticky Footer Navbar Template · Bootstrap v5.1</title>
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sticky-footer-navbar/">
-
-    <!-- Bootstrap core CSS -->
+    <title>AskMeTony</title>
     <link href="../static/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../static/css/mystyle.css" rel="stylesheet">
-
+    <link rel="shortcut icon" href="../static/img/logo.png" type="image/x-icon">
     <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
         }
-      }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
     </style>
 
-    
-    <!-- Custom styles for this template -->
-    <link href="sticky-footer-navbar.css" rel="stylesheet">
-  </head>
-  <body class="d-flex flex-column h-100">
-    
-<header>
-  <!-- Fixed navbar -->
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Fixed navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-</header>
+    <link href="../static/css/mystyle.css" rel="stylesheet">
+</head>
 
-<!-- Begin page content -->
-<main class="flex-shrink-0">
-  <div class="container">
-    <h1 class="mt-5">Sticky footer with fixed navbar</h1>
-    <p class="lead">Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code class="small">padding-top: 60px;</code> on the <code class="small">main &gt; .container</code>.</p>
-    <p>Back to <a href="/docs/5.1/examples/sticky-footer/">the default sticky footer</a> minus the navbar.</p>
-  </div>
-</main>
+<body class="d-flex flex-column h-100">
+    <header>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">AskMeTony</a>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="not_log">
+                            <a class="nav-link active" aria-current="page" href=".html">Log in</a>
+                        </li>
+                        <li class="not_log">
+                            <a class="nav-link" href=".html">Register</a>
+                        </li>
+                        <li class="logged">
+                            <img class="avatar" src="../static/img/user1.png" width="48px" height="44px">
+                        </li>
+                        <li class="logged_text">
+                            <span class="nickname">MyNickname</span>
+                            <a class="settings" href=".html">settings</a>
+                            <a class="log_out" href=".html">log out</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">ASK</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-<footer class="footer mt-auto py-3 bg-light">
-  <div class="container">
-    <span class="text-muted">Place sticky footer content here.</span>
-  </div>
-</footer>
+    <!-- Begin page content -->
+    <main class="flex-shrink-0">
+        <div class="container" id="main_structure">
+            <div class="row">
+                <div class="col-8">
+                    <div class="New Questions">New Questions
+                        <a class="hot Questions" href="#">Hot Questions</a>
+                    </div>
 
+                    <div class="row question">
+                        <div class="col-2">
+                            <div><img class="question_avatar" src="../static/img/user2.png"></div>
+                            <div>
+                                <button type="button" class="btn btn-outline-danger">&#128577;</button>
+                                <button type="button" class="btn btn-outline-success">&#128515;</button>
+                                <div class="rating"> Rating: 5</div>
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <a class="question link" href=".html">I am asking for ...</a>
+                            <div class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos aspernatur,
+                                atque at
+                                veritatis labore nisi deserunt suscipit, reprehenderit placeat doloribus neque sequi
+                                illo
+                                aperiam reiciendis quod autem explicabo. Cum, ullam! Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit.
+                                Dolores impedit laboriosam veritatis temporibus non delectus quibusdam vel. Harum cum
+                                mollitia obcaecati? Inventore aut quasi cum voluptates nam magni in laborum.
+                            </div>
+                            <div class="under question">
+                                <a class="answers" href=".html">Answers (3)</a>
+                                <span class="tags">Tags:</span>
+                                <a href=".html">AnswTag1</a>
+                                <a href="#">AnswTag2</a>
+                            </div>
+                        </div>
+                    </div>
 
-    <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+                    <div class="row question">
+                        <div class="col-2">
+                            <div><img class="question_avatar" src="../static/img/user3.png"></div>
+                            <div>
+                                <button type="button" class="btn btn-outline-danger">&#128577;</button>
+                                <button type="button" class="btn btn-outline-success">&#128515;</button>
+                                <div class="rating"> Rating: 5</div>
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <a class="question link" href=".html">I am looking for ...</a>
+                            <div class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos aspernatur,
+                                atque at
+                                veritatis labore nisi deserunt suscipit, reprehenderit placeat doloribus neque sequi
+                                illo
+                                aperiam reiciendis quod autem explicabo. Cum, ullam! Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit.
+                                Dolores impedit laboriosam veritatis temporibus non delectus quibusdam vel. Harum cum
+                                mollitia obcaecati? Inventore aut quasi cum voluptates nam magni in laborum.
+                            </div>
+                            <div class="under question">
+                                <a class="answers" href=".html">Answers (3)</a>
+                                <span class="tags">Tags:</span>
+                                <a href=".html">AnswTag1</a>
+                                <a href="#">AnswTag2</a>
+                            </div>
+                        </div>
+                    </div>
 
-      
-  </body>
+                    <div class="row question">
+                        <div class="col-2">
+                            <div><img class="question_avatar" src="../static/img/user2.png"></div>
+                            <div>
+                                <button type="button" class="btn btn-outline-danger">&#128577;</button>
+                                <button type="button" class="btn btn-outline-success">&#128515;</button>
+                                <div class="rating"> Rating: 5</div>
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <a class="question link" href=".html">I am asking for ...</a>
+                            <div class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos aspernatur,
+                                atque at
+                                veritatis labore nisi deserunt suscipit, reprehenderit placeat doloribus neque sequi
+                                illo
+                                aperiam reiciendis quod autem explicabo. Cum, ullam! Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit.
+                                Dolores impedit laboriosam veritatis temporibus non delectus quibusdam vel. Harum cum
+                                mollitia obcaecati? Inventore aut quasi cum voluptates nam magni in laborum.
+                            </div>
+                            <div class="under question">
+                                <a class="answers" href=".html">Answers (3)</a>
+                                <span class="tags">Tags:</span>
+                                <a href=".html">AnswTag1</a>
+                                <a href="#">AnswTag2</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <nav aria-label="...">
+                        <ul class="pagination">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active" aria-current="page">
+                                <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="col-4">
+                    <div class="popular_tags">Popular Tags</div>
+                    <div class="topic_tags">
+                        <a class="topic_tag1 topic_tag" href=".html"> Tag1 </a>
+                        <a class="topic_tag2 topic_tag" href="#"> Tag2 </a>
+                        <a class="topic_tag3 topic_tag" href="#"> Tag3 </a>
+                        <a class="topic_tag4 topic_tag" href="#"> Tag4 </a>
+                        <a class="topic_tag5 topic_tag" href="#"> Tag5 </a>
+                        <a class="topic_tag6 topic_tag" href="#"> Tag6 </a>
+                        <a class="topic_tag7 topic_tag" href="#"> Tag7 </a>
+                        <a class="topic_tag8 topic_tag" href="#"> Tag8 </a>
+                    </div>
+
+                    <div class="members"> Best Members </div>
+                    <ul class="member_tags">
+                        <li>
+                            <a class="tag" href="#"> User1 </a>
+                        </li>
+                        <li>
+                            <a class="tag" href="#"> User2 </a>
+                        </li>
+                        <li>
+                            <a class="tag" href="#"> User3 </a>
+                        </li>
+                        <li>
+                            <a class="tag" href="#"> User4 </a>
+                        </li>
+                        <li>
+                            <a class="tag" href="#"> User5 </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">&copy;Tony WEB-11 HW-1</span>
+        </div>
+    </footer>
+</body>
+
 </html>
