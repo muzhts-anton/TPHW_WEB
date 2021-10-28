@@ -6,8 +6,8 @@ from django.core.paginator import Paginator
 
 questions = [
     {
-        "title": f'Title {i}',
-        "text": f'Content {i}',
+        "title": f'Title {i + 1}',
+        "text": f'Content {i + 1}',
         "num": i,
     } for i in range(100)
 ]
@@ -18,10 +18,6 @@ def index(request):
     page = request.GET.get('page')
     content = paginator.get_page(page)
     return render(request, "index.html", {'questions': content})
-
-
-def hot(request):
-    return render(request, "hot.html", {})
 
 
 def question(request):
