@@ -1,0 +1,21 @@
+{% load static %}
+
+<div class="row answer">
+    <div class="col-2">
+        <div><img class="question_avatar" src="{% static pic %}"></div>
+        <div>
+            <button type="button" class="btn btn-outline-danger">&#128577;</button>
+            <button type="button" class="btn btn-outline-success">&#128515;</button>
+            <div class="rating"> Rating: {{ rating }}</div>
+        </div>
+    </div>
+    <div class="col-10">
+        <div class="text"> {{ text }}</div>
+        <div class="under question">
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Correct!</label>
+            </div>
+        </div>
+    </div>
+</div>

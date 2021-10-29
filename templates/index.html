@@ -8,10 +8,12 @@
     </div>
 
     {% for question in questions %}
-        {% include "include/singlequestion.html" with rating=question.num|mod:8 %}
+        {% if question.id|mod:7 is 1 or question.id|mod:5 is 4 %}
+            {% include "include/singleblock.html" with rating=question.id|mod:8 pic="/img/user2.png" text=question.text title=question.title %}
+        {% else %}
+            {% include "include/singleblock.html" with rating=question.id|mod:8 pic="/img/user1.png" text=question.text title=question.title %}
+        {% endif %}
     {% endfor %}
 
-    
-
-    {% include "include/pagination.html" %}
+    {% include "include/pagination.html" with content=questions %}
 {% endblock content %}

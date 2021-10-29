@@ -1,139 +1,35 @@
-<!doctype html>
-<html lang="en" class="h-100">
+{% extends 'include/base.html' %}
+{% load static %}
 
-<head>
-    <meta charset="utf-8">
-    <title>AskTony</title>
-    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="../static/img/logo.png" type="image/x-icon">
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-    </style>
-
-    <link href="../static/css/mystyle.css" rel="stylesheet">
-</head>
-
-<body class="d-flex flex-column h-100">
-    <header>
-        <!-- Fixed navbar -->
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">AskTony</a>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                        <li class="not_log">
-                            <a class="nav-link active" aria-current="page" href="login.html">Log in</a>
-                        </li>
-                        <li class="not_log">
-                            <a class="nav-link" href="register.html">Register</a>
-                        </li>
-                        <li class="logged">
-                            <img class="avatar" src="../static/img/user1.png" width="48px" height="44px">
-                        </li>
-                        <li class="logged_text">
-                            <span class="nickname">MyNickname</span>
-                            <a class="settings" href="settings.html">settings</a>
-                            <a class="log_out" href="#">log out</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">ASK</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Begin page content -->
-    <main class="flex-shrink-0">
-        <div class="container" id="main_structure">
-            <div class="row">
-                <div class="col-8">
-                    <div class="New Questions">Registration</div>
-                    <div class="email_taken">Email address already registred</div>
-                    <div class="different_passwords">Passwords doesn't match</div>
-                    <form>
-                        <div class="form-row">
-                            <label for="login">Login</label>
-                            <input type="text" class="form-control" id="login" required>
-                        </div>
-                        <div class="form-row">
-                            <label for="email_validation">Email</label>
-                            <input type="email" class="form-control" id="email_validation" required>
-                        </div>
-                        <div class="form-row">
-                            <label for="name_validation">NickName</label>
-                            <input type="text" class="form-control" id="name_validation" required>
-                        </div>
-                        <div class="form-row">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password" required>
-                        </div>
-                        <div class="form-row">
-                            <label for="password">Repeat password</label>
-                            <input type="password" class="form-control" id="password" required>
-                        </div>
-                        <label for="avatar_uploader">Upload Profile Picture</label>
-                        <div class="form-row">
-                            <input type="file" class="form-control-file" id="avatar_uploader">
-                        </div>
-                        <button class="btn btn-success btn-lg" type="submit">Register</button>
-                    </form>
-                </div>
-
-                <div class="col-4">
-                    <div class="popular_tags">Popular Tags</div>
-                    <div class="topic_tags">
-                        <a class="topic_tag1 topic_tag" href="tag.html"> Tag1 </a>
-                        <a class="topic_tag2 topic_tag" href="#"> Tag2 </a>
-                        <a class="topic_tag3 topic_tag" href="#"> Tag3 </a>
-                        <a class="topic_tag4 topic_tag" href="#"> Tag4 </a>
-                        <a class="topic_tag5 topic_tag" href="#"> Tag5 </a>
-                        <a class="topic_tag6 topic_tag" href="#"> Tag6 </a>
-                        <a class="topic_tag7 topic_tag" href="#"> Tag7 </a>
-                        <a class="topic_tag8 topic_tag" href="#"> Tag8 </a>
-                    </div>
-
-                    <div class="members"> Best Members </div>
-                    <ul class="member_tags">
-                        <li>
-                            <a class="tag" href="#"> User1 </a>
-                        </li>
-                        <li>
-                            <a class="tag" href="#"> User2 </a>
-                        </li>
-                        <li>
-                            <a class="tag" href="#"> User3 </a>
-                        </li>
-                        <li>
-                            <a class="tag" href="#"> User4 </a>
-                        </li>
-                        <li>
-                            <a class="tag" href="#"> User5 </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+{% block content %}
+    <div class="New Questions">Registration</div>
+    <div class="email_taken">Email address already registred</div>
+    <div class="different_passwords">Passwords doesn't match</div>
+    <form>
+        <div class="form-row">
+            <label for="login">Login</label>
+            <input type="text" class="form-control" id="login" required>
         </div>
-    </main>
-
-    <footer class="footer mt-auto py-3 bg-light">
-        <div class="container">
-            <span class="text-muted">&copy;Tony WEB-11 HW-1 2021</span>
+        <div class="form-row">
+            <label for="email_validation">Email</label>
+            <input type="email" class="form-control" id="email_validation" required>
         </div>
-    </footer></body>
-
-</html>
+        <div class="form-row">
+            <label for="name_validation">NickName</label>
+            <input type="text" class="form-control" id="name_validation" required>
+        </div>
+        <div class="form-row">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" required>
+        </div>
+        <div class="form-row">
+            <label for="password">Repeat password</label>
+            <input type="password" class="form-control" id="password" required>
+        </div>
+        <label for="avatar_uploader">Upload Profile Picture</label>
+        <div class="form-row">
+            <input type="file" class="form-control-file" id="avatar_uploader">
+        </div>
+        <button class="btn btn-success btn-lg" type="submit">Register</button>
+    </form>
+{% endblock %}

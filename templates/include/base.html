@@ -32,21 +32,21 @@
         <!-- Fixed navbar -->
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">AskTony</a>
+                <a class="navbar-brand" href="{% url "index" %}">AskTony</a>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         <li class="not_log">
-                            <a class="nav-link active" aria-current="page" href="login.html">Log in</a>
+                            <a class="nav-link active" aria-current="page" href="{% url "login" %}">Log in</a>
                         </li>
                         <li class="not_log">
-                            <a class="nav-link" href="register.html">Register</a>
+                            <a class="nav-link" href="{% url "register" %}">Register</a>
                         </li>
                         <li class="logged">
                             <img class="avatar" src="{% static "/img/myself.png" %}" width="48px" height="44px">
                         </li>
                         <li class="logged_text">
                             <span class="nickname">MyNickname</span>
-                            <a class="settings" href="settings.html">settings</a>
+                            <a class="settings" href="{% url "settings" %}">settings</a>
                             <a class="log_out" href="#">log out</a>
                         </li>
                     </ul>
@@ -71,7 +71,7 @@
                 <div class="col-4">
                     <div class="popular_tags">Popular Tags</div>
                     <div class="topic_tags">
-                        <a class="topic_tag1 topic_tag" href="tag.html"> Tag1 </a>
+                        <a class="topic_tag1 topic_tag" href="{% url "tag" %}"> Tag1 </a>
                         <a class="topic_tag2 topic_tag" href="#"> Tag2 </a>
                         <a class="topic_tag3 topic_tag" href="#"> Tag3 </a>
                         <a class="topic_tag4 topic_tag" href="#"> Tag4 </a>
