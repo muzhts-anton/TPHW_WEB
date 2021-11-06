@@ -2,6 +2,12 @@ from django.shortcuts import render
 from django.core.paginator import Paginator
 
 
+def paginate(data, request, per_page=10):
+    paginator = Paginator(data, per_page)
+    page = request.GET.get('page')
+    pag_questions = paginator.get_page(page)
+    return pag_questions
+
 questions = [
     {
         "title": f'Question title {i + 1}',
@@ -12,16 +18,12 @@ questions = [
 
 
 def index(request):
-    paginator = Paginator(questions, 10)
-    page = request.GET.get('page')
-    content = paginator.get_page(page)
+    content = paginate(questions, request)
     return render(request, "index.html", {'questions': content})
 
 
 def bender(request):
-    paginator = Paginator(questions, 5)
-    page = request.GET.get('page')
-    content = paginator.get_page(page)
+    content = paginate(questions, request, 5)
     return render(request, "tag.html", {'questions': content})
 
 
@@ -35,9 +37,7 @@ answers = [
 
 
 def question(request):
-    paginator = Paginator(answers, 2)
-    page = request.GET.get('page')
-    content = paginator.get_page(page)
+    content = paginate(answers, request, 2)
     return render(request, "question.html", {"question": questions[5], "answers": content})
 
 
