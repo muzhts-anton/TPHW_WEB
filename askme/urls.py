@@ -17,15 +17,9 @@ from django.contrib import admin
 from django.urls import path
 
 from app import views
+from app import urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index),
-    path('new/', views.index, name="index"),
-    path('ask/', views.ask, name="ask"),
-    path('bender/', views.bender, name="tag"),
-    path('settings/', views.settings, name="settings"),
-    path('login/', views.login, name="login"),
-    path('register/', views.register, name="register"),
-    path('question/', views.question, name="question")
-]
+    path('', views.index)
+] + urls.app_urlpatterns
