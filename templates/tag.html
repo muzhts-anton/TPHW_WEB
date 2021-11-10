@@ -3,15 +3,13 @@
 {% load mathfilters %}
 
 {% block content %}
-    <div class="Tag_search"> <span>Tag:</span> <span class="find_tag">AnswTag1</span>
+    <div class="Tag_search"> 
+        <span>Tag:</span>
+        <span class="find_tag"> {{ tag }} </span>
     </div>
     
     {% for question in questions %}
-        {% if question.id|mod:7 is 1 or question.id|mod:5 is 4 %}
-            {% include "include/singleblock.html" with rating=question.id|mod:8 pic="/img/user2.png" text=question.text title=question.title %}
-        {% else %}
-            {% include "include/singleblock.html" with rating=question.id|mod:8 pic="/img/user1.png" text=question.text title=question.title %}
-        {% endif %}
+        {% include "include/singleblock.html" %}
     {% endfor %}
 
     {% include 'include/pagination.html' with content=questions %}

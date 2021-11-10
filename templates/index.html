@@ -8,11 +8,7 @@
     </div>
 
     {% for question in questions %}
-        {% if question.id|mod:7 is 1 or question.id|mod:5 is 4 %}
-            {% include "include/singleblock.html" %}
-        {% else %}
-            {% include "include/singleblock.html" %}
-        {% endif %}
+        {% include "include/singleblock.html" %}
     {% endfor %}
 
     {% include "include/pagination.html" with content=questions %}
