@@ -2,21 +2,23 @@
 
 <div class="row question">
     <div class="col-2">
-        <div><img class="question_avatar" src="{% static pic %}"></div>
+        <div class = "login"> {{ question.author.nickname }} </div>
+        <div><img class="question_avatar" src={{ question.author.avatar.url }}></div>
         <div>
             <button type="button" class="btn btn-outline-danger">&#128577;</button>
             <button type="button" class="btn btn-outline-success">&#128515;</button>
-            <div class="rating"> Rating:{{ rating }}</div>
+            <div class="rating"> Rating:{{ question.rating }}</div>
         </div>
     </div>
     <div class="col-10">
-        <a class="question link" href="{% url "question" %}">{{ title }}</a>
-        <div class="text">{{ text }}</div>
+        <a class="question link" href="{% url "index" %}">{{ question.title }}</a>
+        <div class="text">{{ question.text }}</div>
         <div class="under question">
-            <a class="answers" href="{% url "question" %}">Answers (3)</a>
+            <a class="answers" href="{% url "index" %}">Answers {{ question.answers.count }}</a>
             <span class="tags">Tags:</span>
-            <a href="{% url "tag" %}">AnswTag1</a>
-            <a href="#">AnswTag2</a>
+            {% comment %} {% for tag in question.tags  %}
+                <a href = {% url 'tag_search' tag=tag %}> {{ tag }}</a>
+            {% endfor %} {% endcomment %}
         </div>
     </div>
 </div>

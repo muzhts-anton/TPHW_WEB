@@ -9,9 +9,9 @@
 
     {% for question in questions %}
         {% if question.id|mod:7 is 1 or question.id|mod:5 is 4 %}
-            {% include "include/singleblock.html" with rating=question.id|mod:8 pic="/img/user2.png" text=question.text title=question.title %}
+            {% include "include/singleblock.html" %}
         {% else %}
-            {% include "include/singleblock.html" with rating=question.id|mod:8 pic="/img/user1.png" text=question.text title=question.title %}
+            {% include "include/singleblock.html" %}
         {% endif %}
     {% endfor %}
 

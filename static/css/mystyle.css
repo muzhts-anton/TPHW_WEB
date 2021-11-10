@@ -349,3 +349,10 @@ form>.avatar {
     color: midnightblue;
     font-size: 1.6em;
 }
+
+.login {
+    color:green;
+    font-size: 1em;
+    margin-top: 5px;
+    margin-right: 5px;
+}
