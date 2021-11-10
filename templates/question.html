@@ -3,11 +3,11 @@
 {% load mathfilters %}
 
 {% block content %}
-    {% include "include/bigquestion.html" with pic="/img/user1.png" rating=question.id|mod:7 title=question.title text=question.text %}
+    {% include "include/bigquestion.html" %}
 
     <div class="answer block">
         {% for answer in answers %}
-            {% include "include/singleanswer.html" with pic="/img/user2.png" rating=answer.id|mod:7 text=answer.text %}
+            {% include "include/singleanswer.html" %}
         {% endfor %}
 
         {% include 'include/pagination.html' with content=answers %}

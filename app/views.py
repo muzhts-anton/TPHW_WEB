@@ -27,9 +27,13 @@ def bender(request, tag):
     return render(request, "tag.html", {'questions': content, 'tag': tag, 'tags': tags, 'profiles': profiles})
 
 
-# def question(request):
-#     content = paginate(answers, request, 2)
-#     return render(request, "question.html", {"question": questions[5], "answers": content})
+def question(request, pk):
+    question = get_object_or_404(models.Question.objects, pk=pk)
+    tags = models.Tag.objects.all()[0:8]
+    profiles = models.Profile.objects.all()[0:5]
+    answers = question.answers()
+    content = paginate(answers, request, 2)
+    return render(request, "question.html", {"question": question, "answers": content, 'tags': tags, 'profiles': profiles})
 
 
 def ask(request):

@@ -8,6 +8,6 @@ app_urlpatterns = [
     path('tag/<slug:tag>/', views.bender, name="tag"),
     path('settings/', views.settings, name="settings"),
     path('login/', views.login, name="login"),
-    path('register/', views.register, name="register")
-    # path('question/', views.question, name="question")
+    path('register/', views.register, name="register"),
+    path('question/<int:pk>/', views.question, name="question")
 ]
