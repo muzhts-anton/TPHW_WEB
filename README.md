@@ -1,2 +1,5 @@
-# TPHW_WEB
-A repository of homework of a TechnoPark course web technologies (sem 1)
+# Technopark (VK Education). 1 semestr. Django web application.
+
+Each part of the homework is in the corresponding branch.
+
+link to task: https://github.com/ziontab/tp-tasks/tree/master/files/markdown
